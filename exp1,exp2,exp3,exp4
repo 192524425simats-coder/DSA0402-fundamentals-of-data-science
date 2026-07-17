@@ -1,0 +1,198 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "d73e423b-ec2e-4b04-a892-e9e73a7b0ab7",
+   "metadata": {},
+   "source": [
+    "## **EXPERIMENT 1**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "b7d8ca35-ce37-4bbc-9156-3d2417b49752",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Average Score for Each Subject:\n",
+      "Math: 85.50\n",
+      "Science: 88.25\n",
+      "English: 82.00\n",
+      "History: 86.75\n",
+      "\n",
+      "Subject with Highest Average Score:\n",
+      "Science with average 88.25\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "student_scores = np.array([\n",
+    "    [85, 90, 78, 88],\n",
+    "    [92, 87, 84, 90],\n",
+    "    [76, 85, 80, 82],\n",
+    "    [89, 91, 86, 87]\n",
+    "])\n",
+    "subjects = [\"Math\", \"Science\", \"English\", \"History\"]\n",
+    "average_scores = np.mean(student_scores, axis=0)\n",
+    "print(\"Average Score for Each Subject:\")\n",
+    "for subject, avg in zip(subjects, average_scores):\n",
+    "    print(f\"{subject}: {avg:.2f}\")\n",
+    "highest_index = np.argmax(average_scores)\n",
+    "print(\"\\nSubject with Highest Average Score:\")\n",
+    "print(subjects[highest_index], \"with average\", average_scores[highest_index])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "053097a4-472e-4b4b-85f2-c16d2deaf26f",
+   "metadata": {},
+   "source": [
+    "## **EXPERIMENT 2**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5c47e6e3-dbe1-4251-a6fd-92eab62c7656",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Average Price of All Products Sold: 160.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "sales_data = np.array([\n",
+    "    [100, 120, 110],\n",
+    "    [200, 210, 220],\n",
+    "    [150, 160, 170]\n",
+    "])\n",
+    "average_price = np.mean(sales_data)\n",
+    "print(\"Average Price of All Products Sold:\", average_price)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87a61d82-ef1f-4e47-b287-1d04026c399f",
+   "metadata": {},
+   "source": [
+    "## **EXPERIMENT 3**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "abf553f0-6543-4840-9d79-ea8da170aeb7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Average Sale Price: 575000.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "house_data = np.array([\n",
+    "    [3, 1500, 300000],\n",
+    "    [5, 2500, 500000],\n",
+    "    [4, 1800, 350000],\n",
+    "    [6, 3200, 650000]\n",
+    "])\n",
+    "filtered_houses = house_data[house_data[:, 0] > 4]\n",
+    "average_sale_price = np.mean(filtered_houses[:, 2])\n",
+    "print(\"Average Sale Price:\", average_sale_price)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "39a76e53-8925-4d69-8b8a-5b9ceb6001e1",
+   "metadata": {},
+   "source": [
+    "## **EXPERIMENT 4**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c44cae93-2151-43a1-857b-4503321c917e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Total Sales: 260000\n",
+      "Percentage Increase: 60.0 %\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "sales_data = np.array([50000, 60000, 70000, 80000])\n",
+    "total_sales = np.sum(sales_data)\n",
+    "percentage_increase = ((sales_data[3] - sales_data[0]) / sales_data[0]) * 100\n",
+    "print(\"Total Sales:\", total_sales)\n",
+    "print(\"Percentage Increase:\", percentage_increase, \"%\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4f5cbaa9-7232-4095-88fc-b4422e15d4c7",
+   "metadata": {},
+   "source": [
+    "## **EXPERIMENT 5**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "45aca540-5dcb-4079-89aa-3d4dba2c9437",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "fuel_efficiency = np.array([18, 22, 25, 30])\n",
+    "average_efficiency = np.mean(fuel_efficiency)\n",
+    "\n",
+    "# Percentage improvement from Model 1 to Model 4\n",
+    "percentage_improvement = ((fuel_efficiency[3] - fuel_efficiency[0]) / fuel_efficiency[0]) * 100\n",
+    "\n",
+    "print(\"Average Fuel Efficiency:\", average_efficiency, \"mpg\")\n",
+    "print(\"Percentage Improvement:\", percentage_improvement, \"%\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
